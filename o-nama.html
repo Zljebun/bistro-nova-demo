@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O nama | Bistro Nova</title>
+  <meta name="description" content="Upoznajte nas tim i pricu iza Bistro Nova restorana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo">Bistro Nova<small>Restaurant &amp; Bar</small></a>
+      <nav class="nav-links" id="nav">
+        <a href="index.html">Pocetna</a>
+        <a href="meni.html">Meni</a>
+        <a href="galerija.html">Galerija</a>
+        <a href="o-nama.html" class="active">O nama</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+      <a href="kontakt.html" class="btn btn-gold btn-nav">Rezervisite sto</a>
+      <button class="mobile-toggle" id="menuBtn" aria-label="Otvori meni">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>O nama</h1>
+      <p>Nasa prica, misija i tim koji stoji iza svakog jela.</p>
+    </div>
+  </div>
+
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content fade-in">
+        <p class="lead">"Hrana nije samo obrok - to je dozivljaj koji povezuje ljude."</p>
+        <p>Bistro Nova je nastao iz ljubavi prema dobroj hrani i zelje da se stvori mjesto gdje se ljudi okupljaju, uzivaju i prave uspomene. Od naseg otvaranja, postali smo omiljeno mjesto za sve koji cijene kvalitetnu kuhinju u toplom ambijentu.</p>
+        <p>Nasi kuhari svakodnevno biraju najsvjezije lokalne namirnice i pretvaraju ih u jela koja spajaju tradicionalne recepte sa modernom prezentacijom. Svako jelo pricamo pricu - od prvog zalogaja do posljednjeg.</p>
+        <p>Bilo da dolazite na poslovni rucak, romanticnu veceru ili proslavu sa prijateljima, Bistro Nova je tu da vas ugosti sa stilom i toplinom.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-section">
+    <div class="container">
+      <h2 class="section-title">Nas <span>tim</span></h2>
+      <p class="section-subtitle">Ljudi koji kreiraju vase kulinarsko iskustvo.</p>
+      <div class="team-grid">
+        <div class="team-card fade-in">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #2e2319, #d4a85540);"></div>
+          <h3>Marko Petrovic</h3>
+          <div class="role">Glavni kuhar</div>
+          <p>15 godina iskustva u vrhunskim restoranima sirom Evrope.</p>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #4a3527, #c0392b30);"></div>
+          <h3>Ana Kovacevic</h3>
+          <div class="role">Sous chef</div>
+          <p>Specijalistkinja za deserte i mediteransku kuhinju.</p>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-avatar" style="background: linear-gradient(135deg, #1b1410, #d4a85530);"></div>
+          <h3>Stefan Ilic</h3>
+          <div class="role">Sommelier</div>
+          <p>Strucnjak za vina sa certifikatom WSET Level 3.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Dozivite Bistro Nova iskustvo</h2>
+      <p>Rezervisite sto i prepustite se ukusima koji ostaju u sjecanju.</p>
+      <a href="kontakt.html" class="btn btn-gold">Rezervisite sto</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Bistro Nova</h4>
+          <p>Restoran sa domacom kuhinjom u srcu grada. Svjezi sastojci, provjereni recepti i topla atmosfera.</p>
+        </div>
+        <div>
+          <h4>Navigacija</h4>
+          <div class="footer-links">
+            <a href="index.html">Pocetna</a>
+            <a href="meni.html">Meni</a>
+            <a href="galerija.html">Galerija</a>
+            <a href="o-nama.html">O nama</a>
+            <a href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+        <div>
+          <h4>Radno vrijeme</h4>
+          <p>Pon - Pet: 11:00 - 23:00</p>
+          <p>Subota: 12:00 - 00:00</p>
+          <p>Nedjelja: 12:00 - 22:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Bistro Nova. Sva prava zadrzana. | Sajt izradio <a href="https://webkraft.ba" target="_blank">WebKraft</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    menuBtn.addEventListener('click', () => nav.classList.toggle('open'));
+    nav.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => nav.classList.remove('open')); });
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
